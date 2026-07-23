@@ -1,0 +1,6 @@
+/Users/vishalkaushal/Documents/ReactNativeProjects/ProductionApp/android/app/.cxx/RelWithDebInfo/6t5t193m/x86_64/CMakeFiles/appmodules.dir
+/Users/vishalkaushal/Documents/ReactNativeProjects/ProductionApp/android/app/.cxx/RelWithDebInfo/6t5t193m/x86_64/CMakeFiles/edit_cache.dir
+/Users/vishalkaushal/Documents/ReactNativeProjects/ProductionApp/android/app/.cxx/RelWithDebInfo/6t5t193m/x86_64/CMakeFiles/rebuild_cache.dir
+/Users/vishalkaushal/Documents/ReactNativeProjects/ProductionApp/android/app/.cxx/RelWithDebInfo/6t5t193m/x86_64/safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir
+/Users/vishalkaushal/Documents/ReactNativeProjects/ProductionApp/android/app/.cxx/RelWithDebInfo/6t5t193m/x86_64/safeareacontext_autolinked_build/CMakeFiles/edit_cache.dir
+/Users/vishalkaushal/Documents/ReactNativeProjects/ProductionApp/android/app/.cxx/RelWithDebInfo/6t5t193m/x86_64/safeareacontext_autolinked_build/CMakeFiles/rebuild_cache.dir

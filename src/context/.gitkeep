@@ -1,0 +1,6 @@
+// Placeholder for context
+// Add your context providers here
+
+// Example:
+// export { AuthContext } from './AuthContext';
+// export { ThemeContext } from './ThemeContext';

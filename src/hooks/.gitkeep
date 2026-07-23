@@ -1,0 +1,6 @@
+// Placeholder for custom hooks
+// Add your custom hooks here
+
+// Example:
+// export { useAuth } from './useAuth';
+// export { useTheme } from './useTheme';

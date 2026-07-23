@@ -1,0 +1,9 @@
+// Placeholder for TypeScript types and interfaces
+// Add your custom types here
+
+// Example:
+// export interface User {
+//   id: string;
+//   name: string;
+//   email: string;
+// }
