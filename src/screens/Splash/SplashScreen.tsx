@@ -8,21 +8,25 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import LocationIcon from '../../assets/icons/location.svg';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../../navigation/AppNavigator';
 
-type SplashScreenProps = {
-    onFinish: () => void;
-};
+type Props = NativeStackScreenProps<
+    RootStackParamList,
+    'Splash'
+>;
 
 export default function SplashScreen({
-    onFinish,
-}: SplashScreenProps) {
+    navigation,
+}: Props) {
+
     useEffect(() => {
         const timer = setTimeout(() => {
-            onFinish();
-        }, 3000);
+            navigation.replace('Login');
+        }, 2500);
 
         return () => clearTimeout(timer);
-    }, [onFinish]);
+    }, []);
 
     return (
         <ImageBackground

@@ -1,30 +1,144 @@
-import React, { useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
     Alert,
-    Dimensions,
-    Image,
+    Animated,
+    Easing,
     ImageBackground,
-    KeyboardAvoidingView,
+    Keyboard,
+    KeyboardEvent,
     Platform,
     Pressable,
-    ScrollView,
     StatusBar,
     StyleSheet,
     Text,
     TextInput,
+    useWindowDimensions,
     View,
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import {
+    SafeAreaView,
+    useSafeAreaInsets,
+} from 'react-native-safe-area-context';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+
 import LoginBadge from '../../assets/images/login_badge.svg';
 import NigeriaFlag from '../../assets/icons/nigeria_flag.svg';
 import GoogleIcon from '../../assets/icons/google.svg';
 import AppleIcon from '../../assets/icons/apple.svg';
 import EmailIcon from '../../assets/icons/email.svg';
+import type { RootStackParamList } from '../../navigation/AppNavigator';
 
-const { width, height } = Dimensions.get('window');
+/*
+ * Height required between the top of the login card
+ * and the top of the keyboard.
+ *
+ * Increase this value if you want the card to move higher.
+ */
+const OPEN_CARD_VISIBLE_HEIGHT = 270;
 
-export default function LoginScreen() {
+type Props = NativeStackScreenProps<RootStackParamList, 'Login'>;
+
+export default function LoginScreen({ navigation }: Props) {
+    const { height: windowHeight } = useWindowDimensions();
+    const insets = useSafeAreaInsets();
+
     const [mobileNumber, setMobileNumber] = useState('');
+    const [isKeyboardOpen, setIsKeyboardOpen] = useState(false);
+    const [rememberLogin, setRememberLogin] = useState(true);
+    const [isInputFocused, setIsInputFocused] = useState(false);
+
+    const cardTranslateY = useRef(new Animated.Value(0)).current;
+
+    /*
+     * The hero never changes its height.
+     * This keeps all top elements fixed.
+     */
+    const heroHeight = useMemo(() => {
+        return Math.max(windowHeight * 0.64, 540);
+    }, [windowHeight]);
+
+    /*
+     * Original card position before the keyboard opens.
+     */
+    const closedCardTop = heroHeight - 150;
+
+    function animateCard(toValue: number, duration = 250) {
+        Animated.timing(cardTranslateY, {
+            toValue,
+            duration,
+            easing: Easing.out(Easing.cubic),
+            useNativeDriver: true,
+        }).start();
+    }
+
+    function handleKeyboardShow(event: KeyboardEvent) {
+        setIsKeyboardOpen(true);
+
+        /*
+         * screenY gives the exact top position of the native keyboard.
+         *
+         * Safe-area top is removed because this screen starts below
+         * the top safe area.
+         */
+        const keyboardTop =
+            event.endCoordinates.screenY - insets.top;
+
+        /*
+         * The desired card position places its main content
+         * directly above the keyboard.
+         */
+        const desiredCardTop =
+            keyboardTop - OPEN_CARD_VISIBLE_HEIGHT;
+
+        /*
+         * Only allow upward movement.
+         */
+        const cardOffset = Math.min(
+            0,
+            desiredCardTop - closedCardTop,
+        );
+
+        animateCard(cardOffset, event.duration || 250);
+    }
+
+    function handleKeyboardHide(event: KeyboardEvent) {
+        setIsKeyboardOpen(false);
+        setIsInputFocused(false);
+
+        animateCard(0, event.duration || 250);
+    }
+
+    useEffect(() => {
+        const showEvent =
+            Platform.OS === 'ios'
+                ? 'keyboardWillShow'
+                : 'keyboardDidShow';
+
+        const hideEvent =
+            Platform.OS === 'ios'
+                ? 'keyboardWillHide'
+                : 'keyboardDidHide';
+
+        const showSubscription = Keyboard.addListener(
+            showEvent,
+            handleKeyboardShow,
+        );
+
+        const hideSubscription = Keyboard.addListener(
+            hideEvent,
+            handleKeyboardHide,
+        );
+
+        return () => {
+            showSubscription.remove();
+            hideSubscription.remove();
+        };
+    }, [closedCardTop, insets.top]);
+
+    function handleMobileNumberChange(value: string) {
+        const numbersOnly = value.replace(/\D/g, '');
+        setMobileNumber(numbersOnly);
+    }
 
     function handleContinue() {
         const cleanedNumber = mobileNumber.replace(/\D/g, '');
@@ -37,170 +151,306 @@ export default function LoginScreen() {
             return;
         }
 
-        console.log('Mobile number:', `+234${cleanedNumber}`);
+        Keyboard.dismiss();
+
+        const phoneNumber = `+234 ${cleanedNumber}`;
+
+        console.log('Mobile number:', phoneNumber);
+        console.log('Remember login:', rememberLogin);
+
+        navigation.navigate('OTPVerification', { phoneNumber });
     }
 
     function handleSkip() {
-        console.log('Skip pressed');
+        Keyboard.dismiss();
+        Alert.alert('Success', 'Skip pressed');
     }
 
     function handleGoogleLogin() {
-        console.log('Google login pressed');
+        Keyboard.dismiss();
+        Alert.alert('Success', 'Google login pressed');
     }
 
     function handleAppleLogin() {
-        console.log('Apple login pressed');
+        Keyboard.dismiss();
+        Alert.alert('Success', 'Apple login pressed');
     }
 
     function handleEmailLogin() {
-        console.log('Email login pressed');
+        Keyboard.dismiss();
+        Alert.alert('Success', 'Email login pressed');
+    }
+
+    function handleTermsOfService() {
+        Alert.alert('Success', 'Terms of Service pressed');
+    }
+
+    function handlePrivacyPolicy() {
+        Alert.alert('Success', 'Privacy Policy pressed');
+    }
+
+    function handleContentPolicies() {
+        Alert.alert('Success', 'Content Policies pressed');
     }
 
     return (
-        <SafeAreaView style={styles.safeArea} edges={['top']}>
+        <SafeAreaView
+            style={styles.safeArea}
+            edges={['top']}>
             <StatusBar
                 barStyle="dark-content"
                 backgroundColor="transparent"
                 translucent
             />
 
-            <KeyboardAvoidingView
-                style={styles.keyboardContainer}
-                behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
-                <ScrollView
-                    contentContainerStyle={styles.scrollContent}
-                    keyboardShouldPersistTaps="handled"
-                    bounces={false}
-                    showsVerticalScrollIndicator={false}>
-                    <View style={styles.heroSection}>
-                        <ImageBackground
-                            source={require('../../assets/images/splash_bg.png')}
-                            resizeMode="cover"
-                            style={styles.heroBackground}
-                            imageStyle={styles.heroImage}>
-                            <View style={styles.heroOverlay} />
-
-                            <Pressable
-                                style={({ pressed }) => [
-                                    styles.skipButton,
-                                    pressed && styles.buttonPressed,
-                                ]}
-                                onPress={handleSkip}>
-                                <Text style={styles.skipText}>Skip</Text>
-                            </Pressable>
-
-                            <View style={styles.headingContainer}>
-                                <Text style={styles.heading}>AFRICA’S FAST</Text>
-                                <Text style={styles.heading}>FOOD DELIVERY APP</Text>
-                                <LoginBadge width={200} height={80} />
-                            </View>
-                        </ImageBackground>
-                    </View>
-
-                    <View style={styles.loginCard}>
-                        <Text style={styles.cardTitle}>Log in or sign up</Text>
-
-                        <View style={styles.mobileRow}>
-                            <Pressable style={styles.countrySelector}>
-                                <NigeriaFlag width={20} height={20} />
-
-                                <Text style={styles.dropdownIcon}>▼</Text>
-                            </Pressable>
-
-                            <View style={styles.phoneInputContainer}>
-                                <Text style={styles.countryCode}>+234</Text>
-
-                                <TextInput
-                                    value={mobileNumber}
-                                    onChangeText={setMobileNumber}
-                                    placeholder="Enter Mobile Number"
-                                    placeholderTextColor="#69708E"
-                                    keyboardType="phone-pad"
-                                    maxLength={15}
-                                    style={styles.phoneInput}
-                                    returnKeyType="done"
-                                    onSubmitEditing={handleContinue}
-                                />
-                            </View>
-                        </View>
+            <View style={styles.screen}>
+                {/* Fixed hero section */}
+                <View
+                    style={[
+                        styles.heroSection,
+                        {
+                            height: heroHeight,
+                        },
+                    ]}>
+                    <ImageBackground
+                        source={require('../../assets/images/splash_bg.png')}
+                        resizeMode="cover"
+                        style={styles.heroBackground}
+                        imageStyle={styles.heroImage}>
+                        <View style={styles.heroOverlay} />
 
                         <Pressable
                             style={({ pressed }) => [
-                                styles.continueButton,
+                                styles.skipButton,
                                 pressed && styles.buttonPressed,
                             ]}
-                            onPress={handleContinue}>
-                            <Text style={styles.continueButtonText}>Continue</Text>
+                            onPress={handleSkip}>
+                            <Text style={styles.skipText}>
+                                Skip
+                            </Text>
                         </Pressable>
 
-                        <View style={styles.socialRow}>
-                            <Pressable
-                                style={({ pressed }) => [
-                                    styles.socialButton,
-                                    pressed && styles.buttonPressed,
-                                ]}
-                                onPress={handleGoogleLogin}>
-                                <GoogleIcon width={30} height={30} />
-                            </Pressable>
+                        <View style={styles.headingContainer}>
+                            <Text style={styles.heading}>
+                                AFRICA’S FAST
+                            </Text>
 
-                            <Pressable
-                                style={({ pressed }) => [
-                                    styles.socialButton,
-                                    pressed && styles.buttonPressed,
-                                ]}
-                                onPress={handleAppleLogin}>
-                                <AppleIcon width={30} height={30} />
-                            </Pressable>
+                            <Text style={styles.heading}>
+                                FOOD DELIVERY APP
+                            </Text>
 
-                            <Pressable
-                                style={({ pressed }) => [
-                                    styles.socialButton,
-                                    pressed && styles.buttonPressed,
-                                ]}
-                                onPress={handleEmailLogin}>
-                                <EmailIcon width={30} height={30} />
-                            </Pressable>
+                            <LoginBadge
+                                width={200}
+                                height={80}
+                            />
                         </View>
+                    </ImageBackground>
+                </View>
 
-                        <Text style={styles.agreementText}>
-                            By continuing, you agree to our
-                        </Text>
+                {/* Only this card moves */}
+                <Animated.View
+                    style={[
+                        styles.loginCard,
+                        {
+                            top: closedCardTop,
+                            transform: [
+                                {
+                                    translateY: cardTranslateY,
+                                },
+                            ],
+                        },
+                    ]}>
+                    <Text style={styles.cardTitle}>
+                        Log in or sign up
+                    </Text>
 
-                        <View style={styles.policyRow}>
-                            <Pressable onPress={() => console.log('Terms of Service')}>
-                                <Text style={styles.policyText}>Terms of Service</Text>
-                            </Pressable>
+                    <View style={styles.mobileRow}>
+                        <Pressable
+                            style={({ pressed }) => [
+                                styles.countrySelector,
+                                pressed && styles.buttonPressed,
+                            ]}>
+                            <NigeriaFlag
+                                width={28}
+                                height={28}
+                            />
 
-                            <Pressable onPress={() => console.log('Privacy Policy')}>
-                                <Text style={styles.policyText}>Privacy Policy</Text>
-                            </Pressable>
+                            <Text style={styles.dropdownIcon}>
+                                ▼
+                            </Text>
+                        </Pressable>
 
-                            <Pressable onPress={() => console.log('Content Policies')}>
-                                <Text style={styles.policyText}>Content Policies</Text>
-                            </Pressable>
+                        <View
+                            style={[
+                                styles.phoneInputContainer,
+                                isInputFocused &&
+                                styles.phoneInputContainerFocused,
+                            ]}>
+                            <Text style={styles.countryCode}>
+                                +234
+                            </Text>
+
+                            <TextInput
+                                value={mobileNumber}
+                                onChangeText={
+                                    handleMobileNumberChange
+                                }
+                                onFocus={() =>
+                                    setIsInputFocused(true)
+                                }
+                                onBlur={() =>
+                                    setIsInputFocused(false)
+                                }
+                                placeholder="Enter Mobile Number"
+                                placeholderTextColor="#69708E"
+                                keyboardType="phone-pad"
+                                textContentType="telephoneNumber"
+                                autoComplete="tel"
+                                maxLength={15}
+                                style={styles.phoneInput}
+                                returnKeyType="done"
+                                onSubmitEditing={handleContinue}
+                            />
                         </View>
                     </View>
-                </ScrollView>
-            </KeyboardAvoidingView>
+
+                    {isKeyboardOpen && (
+                        <Pressable
+                            style={styles.rememberRow}
+                            onPress={() =>
+                                setRememberLogin(
+                                    previousValue =>
+                                        !previousValue,
+                                )
+                            }>
+                            <View
+                                style={[
+                                    styles.checkbox,
+                                    rememberLogin &&
+                                    styles.checkboxSelected,
+                                ]}>
+                                {rememberLogin && (
+                                    <Text
+                                        style={
+                                            styles.checkmark
+                                        }>
+                                        ✓
+                                    </Text>
+                                )}
+                            </View>
+
+                            <Text style={styles.rememberText}>
+                                Remember my login for faster
+                                sign-in
+                            </Text>
+                        </Pressable>
+                    )}
+
+                    <Pressable
+                        style={({ pressed }) => [
+                            styles.continueButton,
+                            isKeyboardOpen &&
+                            styles.continueButtonKeyboardOpen,
+                            pressed && styles.buttonPressed,
+                        ]}
+                        onPress={handleContinue}>
+                        <Text
+                            style={
+                                styles.continueButtonText
+                            }>
+                            Continue
+                        </Text>
+                    </Pressable>
+
+                    {!isKeyboardOpen && (
+                        <>
+                            <View style={styles.socialRow}>
+                                <Pressable
+                                    style={({ pressed }) => [
+                                        styles.socialButton,
+                                        pressed &&
+                                        styles.buttonPressed,
+                                    ]}
+                                    onPress={handleGoogleLogin}>
+                                    <GoogleIcon
+                                        width={30}
+                                        height={30}
+                                    />
+                                </Pressable>
+
+                                <Pressable
+                                    style={({ pressed }) => [
+                                        styles.socialButton,
+                                        pressed &&
+                                        styles.buttonPressed,
+                                    ]}
+                                    onPress={handleAppleLogin}>
+                                    <AppleIcon
+                                        width={30}
+                                        height={30}
+                                    />
+                                </Pressable>
+
+                                <Pressable
+                                    style={({ pressed }) => [
+                                        styles.socialButton,
+                                        pressed &&
+                                        styles.buttonPressed,
+                                    ]}
+                                    onPress={handleEmailLogin}>
+                                    <EmailIcon
+                                        width={30}
+                                        height={30}
+                                    />
+                                </Pressable>
+                            </View>
+
+                            <Text style={styles.agreementText}>
+                                By continuing, you agree to our
+                            </Text>
+
+                            <View style={styles.policyRow}>
+                                <Pressable
+                                    onPress={
+                                        handleTermsOfService
+                                    }>
+                                    <Text
+                                        style={
+                                            styles.policyText
+                                        }>
+                                        Terms of Service
+                                    </Text>
+                                </Pressable>
+
+                                <Pressable
+                                    onPress={
+                                        handlePrivacyPolicy
+                                    }>
+                                    <Text
+                                        style={
+                                            styles.policyText
+                                        }>
+                                        Privacy Policy
+                                    </Text>
+                                </Pressable>
+
+                                <Pressable
+                                    onPress={
+                                        handleContentPolicies
+                                    }>
+                                    <Text
+                                        style={
+                                            styles.policyText
+                                        }>
+                                        Content Policies
+                                    </Text>
+                                </Pressable>
+                            </View>
+                        </>
+                    )}
+                </Animated.View>
+            </View>
         </SafeAreaView>
-    );
-}
-
-type SocialButtonProps = {
-    image: number;
-    onPress: () => void;
-};
-
-function SocialButton({ image, onPress }: SocialButtonProps) {
-    return (
-        <Pressable
-            style={({ pressed }) => [
-                styles.socialButton,
-                pressed && styles.buttonPressed,
-            ]}
-            onPress={onPress}>
-            <Image source={image} style={styles.socialIcon} resizeMode="contain" />
-        </Pressable>
     );
 }
 
@@ -210,17 +460,18 @@ const styles = StyleSheet.create({
         backgroundColor: '#F6F1FF',
     },
 
-    keyboardContainer: {
+    screen: {
         flex: 1,
-    },
-
-    scrollContent: {
-        flexGrow: 1,
+        position: 'relative',
         backgroundColor: '#F6F1FF',
+        overflow: 'hidden',
     },
 
     heroSection: {
-        height: Math.max(height * 0.64, 650),
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
         backgroundColor: '#F6F1FF',
     },
 
@@ -271,78 +522,87 @@ const styles = StyleSheet.create({
         fontSize: 26,
         lineHeight: 36,
         fontFamily: 'Poppins-Bold',
-        fontWeight: 600,
         textAlign: 'center',
         marginBottom: 5,
     },
 
     loginCard: {
-        marginTop: -150,
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        minHeight: 430,
         backgroundColor: '#FFFFFF',
         borderTopLeftRadius: 38,
         borderTopRightRadius: 38,
         paddingTop: 20,
         paddingHorizontal: 24,
-        paddingBottom: 20,
+        paddingBottom: 34,
         borderWidth: 1,
         borderColor: '#E7DDF4',
+        zIndex: 20,
+
+        shadowColor: '#1D1237',
+        shadowOffset: {
+            width: 0,
+            height: -4,
+        },
+        shadowOpacity: 0.05,
+        shadowRadius: 12,
+        elevation: 8,
     },
 
     cardTitle: {
         color: '#1B102A',
-        fontSize: 16,
-        fontWeight: 600,
+        fontSize: 18,
         textAlign: 'center',
-        fontFamily: 'Google Sans',
-        marginBottom: 20,
+        fontFamily: 'Poppins-SemiBold',
+        marginBottom: 24,
     },
 
     mobileRow: {
         flexDirection: 'row',
-        gap: 10,
+        gap: 12,
     },
 
     countrySelector: {
-        width: 80,
+        width: 88,
         height: 60,
-        borderRadius: 10,
+        borderRadius: 12,
         borderWidth: 1.5,
         borderColor: '#E5DCF4',
         backgroundColor: '#FBF9FF',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        gap: 15,
-    },
-
-    flagIcon: {
-        width: 40,
-        height: 29,
+        gap: 14,
     },
 
     dropdownIcon: {
         color: '#696F8C',
-        fontSize: 15,
+        fontSize: 13,
     },
 
     phoneInputContainer: {
         flex: 1,
         height: 60,
-        borderRadius: 10,
+        borderRadius: 12,
         borderWidth: 1.5,
         borderColor: '#E5DCF4',
         backgroundColor: '#FBF9FF',
         flexDirection: 'row',
         alignItems: 'center',
-        paddingHorizontal: 15,
+        paddingHorizontal: 16,
+    },
+
+    phoneInputContainerFocused: {
+        borderColor: '#D7C5F4',
     },
 
     countryCode: {
         color: '#1E1534',
-        fontSize: 16,
-        fontWeight: 500,
-        fontFamily: 'Google Sans',
-        marginRight: 17,
+        fontSize: 17,
+        fontFamily: 'Poppins-SemiBold',
+        marginRight: 16,
     },
 
     phoneInput: {
@@ -354,6 +614,43 @@ const styles = StyleSheet.create({
         paddingVertical: 0,
     },
 
+    rememberRow: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginTop: 26,
+        paddingHorizontal: 2,
+    },
+
+    checkbox: {
+        width: 28,
+        height: 28,
+        borderRadius: 7,
+        borderWidth: 2,
+        borderColor: '#8034F4',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginRight: 12,
+    },
+
+    checkboxSelected: {
+        backgroundColor: '#8034F4',
+    },
+
+    checkmark: {
+        color: '#FFFFFF',
+        fontSize: 20,
+        lineHeight: 23,
+        fontFamily: 'Poppins-SemiBold',
+    },
+
+    rememberText: {
+        flex: 1,
+        color: '#69708E',
+        fontSize: 15,
+        lineHeight: 22,
+        fontFamily: 'Poppins-Regular',
+    },
+
     continueButton: {
         height: 60,
         borderRadius: 17,
@@ -361,6 +658,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: 20,
+    },
+
+    continueButtonKeyboardOpen: {
+        marginTop: 28,
     },
 
     continueButtonText: {
@@ -384,14 +685,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
 
-    socialIcon: {
-        width: 30,
-        height: 30,
-    },
-
     agreementText: {
         color: '#68708F',
-        fontSize: 17,
+        fontSize: 16,
         textAlign: 'center',
         fontFamily: 'Poppins-Regular',
         marginTop: 20,
@@ -415,6 +711,10 @@ const styles = StyleSheet.create({
 
     buttonPressed: {
         opacity: 0.72,
-        transform: [{ scale: 0.98 }],
+        transform: [
+            {
+                scale: 0.98,
+            },
+        ],
     },
 });

@@ -1,9 +1,9 @@
 CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
 CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/react-native-vector-icons-material-icons
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-OTHER_CFLAGS = $(inherited) -ivfsoverlay "/Users/vishalkaushal/Documents/ReactNativeProjects/ProductionApp/ios/Pods/React-Core-prebuilt/React-VFS.yaml"
-OTHER_CPLUSPLUSFLAGS = $(inherited) -ivfsoverlay "/Users/vishalkaushal/Documents/ReactNativeProjects/ProductionApp/ios/Pods/React-Core-prebuilt/React-VFS.yaml"
-OTHER_SWIFT_FLAGS = $(inherited) -Xcc -ivfsoverlay -Xcc "/Users/vishalkaushal/Documents/ReactNativeProjects/ProductionApp/ios/Pods/React-Core-prebuilt/React-VFS.yaml" -Xcc -Wno-incomplete-umbrella
+OTHER_CFLAGS = $(inherited) -ivfsoverlay "/Applications/XAMPP/xamppfiles/htdocs/Github/zippie_mobile_app/ios/Pods/React-Core-prebuilt/React-VFS.yaml"
+OTHER_CPLUSPLUSFLAGS = $(inherited) -ivfsoverlay "/Applications/XAMPP/xamppfiles/htdocs/Github/zippie_mobile_app/ios/Pods/React-Core-prebuilt/React-VFS.yaml"
+OTHER_SWIFT_FLAGS = $(inherited) -Xcc -ivfsoverlay -Xcc "/Applications/XAMPP/xamppfiles/htdocs/Github/zippie_mobile_app/ios/Pods/React-Core-prebuilt/React-VFS.yaml" -Xcc -Wno-incomplete-umbrella
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_DEVELOPMENT_LANGUAGE = ${DEVELOPMENT_LANGUAGE}

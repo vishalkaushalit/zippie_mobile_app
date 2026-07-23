@@ -1,0 +1,6 @@
+module Pods_ProductionApp {
+  umbrella header "Pods-ProductionApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
