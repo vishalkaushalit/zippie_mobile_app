@@ -578,8 +578,8 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 18,
     right: 20,
-    minWidth: 78,
-    height: 40,
+    minWidth: 70,
+    height: 35,
     borderRadius: 30,
     backgroundColor: "#E9DEFF",
     alignItems: "center",
@@ -589,7 +589,7 @@ const styles = StyleSheet.create({
 
   skipText: {
     color: "#8738F4",
-    fontSize: 18,
+    fontSize: 14,
     fontFamily: "Poppins-Medium",
   },
 
@@ -882,15 +882,14 @@ const styles = StyleSheet.create({
   policyRow: {
     marginTop: 16,
     flexDirection: "row",
-    justifyContent: "center",
+    justifyContent: "space-between",
     flexWrap: "wrap",
-    columnGap: 24,
     rowGap: 10,
   },
 
   policyText: {
     color: "#626A88",
-    fontSize: 14,
+    fontSize: 12,
     fontFamily: "Poppins-Medium",
     textDecorationLine: "underline",
   },
