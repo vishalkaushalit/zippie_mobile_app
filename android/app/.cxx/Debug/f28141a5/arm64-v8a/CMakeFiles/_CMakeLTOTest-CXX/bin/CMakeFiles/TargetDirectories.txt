@@ -1,4 +1,0 @@
-/Applications/XAMPP/xamppfiles/htdocs/Github/zippie_mobile_app/android/app/.cxx/Debug/f28141a5/arm64-v8a/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir
-/Applications/XAMPP/xamppfiles/htdocs/Github/zippie_mobile_app/android/app/.cxx/Debug/f28141a5/arm64-v8a/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir
-/Applications/XAMPP/xamppfiles/htdocs/Github/zippie_mobile_app/android/app/.cxx/Debug/f28141a5/arm64-v8a/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/edit_cache.dir
-/Applications/XAMPP/xamppfiles/htdocs/Github/zippie_mobile_app/android/app/.cxx/Debug/f28141a5/arm64-v8a/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/rebuild_cache.dir

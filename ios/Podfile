@@ -7,6 +7,7 @@ require Pod::Executable.execute_command('node', ['-p',
 
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
+inhibit_all_warnings!
 
 linkage = ENV['USE_FRAMEWORKS']
 if linkage != nil
@@ -30,5 +31,19 @@ target 'ProductionApp' do
       :mac_catalyst_enabled => false,
       # :ccache_enabled => true
     )
+
+    installer.pods_project.targets.each do |pod_target|
+      pod_target.build_configurations.each do |build_config|
+        build_config.build_settings['GCC_WARN_INHIBIT_ALL_WARNINGS'] = 'YES'
+        build_config.build_settings['LIBTOOLFLAGS'] = '$(inherited) -no_warning_for_no_symbols'
+        build_config.build_settings['OTHER_LIBTOOLFLAGS'] = '$(inherited) -no_warning_for_no_symbols'
+      end
+
+      pod_target.shell_script_build_phases.each do |phase|
+        if phase.name&.include?('[Hermes] Replace Hermes')
+          phase.always_out_of_date = '1'
+        end
+      end
+    end
   end
 end

@@ -1,1 +1,0 @@
-/Applications/XAMPP/xamppfiles/htdocs/Github/zippie_mobile_app/android/app/build/intermediates/cxx/Debug/f28141a5/obj/x86

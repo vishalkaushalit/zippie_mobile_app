@@ -1,1 +1,0 @@
-/Users/vishalkaushal/Documents/ReactNativeProjects/ProductionApp/android/app/build/intermediates/cxx/RelWithDebInfo/6t5t193m/obj/x86

@@ -24841,6 +24841,7 @@
 		};
 		46EB2E0001C0C0 /* [CP-User] [Hermes] Replace Hermes for the right configuration, if needed */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -30525,6 +30526,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -30553,6 +30555,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -30572,6 +30575,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -30600,6 +30604,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -30619,6 +30624,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -30647,6 +30653,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -30666,6 +30673,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -30694,6 +30702,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -30713,6 +30722,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -30741,6 +30751,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -30760,6 +30771,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -30788,6 +30800,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -30807,6 +30820,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/RNGestureHandler/RNGestureHandler-prefix.pch";
 				GENERATE_INFOPLIST_FILE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -30845,6 +30859,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/RNGestureHandler/RNGestureHandler-prefix.pch";
 				GENERATE_INFOPLIST_FILE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -30874,6 +30889,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/RNReanimated/RNReanimated-prefix.pch";
 				GENERATE_INFOPLIST_FILE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				MODULEMAP_FILE = Headers/Public/reanimated/RNReanimated.modulemap;
 				OTHER_CFLAGS = (
 					"$(inherited)",
@@ -30913,6 +30929,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/RNReanimated/RNReanimated-prefix.pch";
 				GENERATE_INFOPLIST_FILE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				MODULEMAP_FILE = Headers/Public/reanimated/RNReanimated.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -30943,6 +30960,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/RNSVG/RNSVG-prefix.pch";
 				GENERATE_INFOPLIST_FILE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -30981,6 +30999,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/RNSVG/RNSVG-prefix.pch";
 				GENERATE_INFOPLIST_FILE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -31005,6 +31024,7 @@
 				IBSC_MODULE = RNSVG;
 				INFOPLIST_FILE = "Target Support Files/RNSVG/ResourceBundle-RNSVGFilters-RNSVG-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				PRODUCT_NAME = RNSVGFilters;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -31022,6 +31042,7 @@
 				IBSC_MODULE = RNSVG;
 				INFOPLIST_FILE = "Target Support Files/RNSVG/ResourceBundle-RNSVGFilters-RNSVG-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				PRODUCT_NAME = RNSVGFilters;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -31044,6 +31065,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/RNScreens/RNScreens-prefix.pch";
 				GENERATE_INFOPLIST_FILE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				MODULEMAP_FILE = Headers/Public/RNScreens/RNScreens.modulemap;
 				OTHER_CFLAGS = (
 					"$(inherited)",
@@ -31083,6 +31105,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/RNScreens/RNScreens-prefix.pch";
 				GENERATE_INFOPLIST_FILE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				MODULEMAP_FILE = Headers/Public/RNScreens/RNScreens.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -31113,6 +31136,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/RNWorklets/RNWorklets-prefix.pch";
 				GENERATE_INFOPLIST_FILE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				MODULEMAP_FILE = Headers/Public/worklets/RNWorklets.modulemap;
 				OTHER_CFLAGS = (
 					"$(inherited)",
@@ -31152,6 +31176,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/RNWorklets/RNWorklets-prefix.pch";
 				GENERATE_INFOPLIST_FILE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				MODULEMAP_FILE = Headers/Public/worklets/RNWorklets.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -31182,6 +31207,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -31210,6 +31236,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -31229,6 +31256,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -31258,6 +31286,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(inherited)",
 					"-DRCT_NEW_ARCH_ENABLED=1",
@@ -31277,6 +31306,7 @@
 				IBSC_MODULE = React;
 				INFOPLIST_FILE = "Target Support Files/React-Core/ResourceBundle-React-Core_privacy-React-Core-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				PRODUCT_NAME = "React-Core_privacy";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -31294,6 +31324,7 @@
 				IBSC_MODULE = React;
 				INFOPLIST_FILE = "Target Support Files/React-Core/ResourceBundle-React-Core_privacy-React-Core-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				PRODUCT_NAME = "React-Core_privacy";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -31316,6 +31347,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -31345,6 +31377,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(inherited)",
 					"-DRCT_NEW_ARCH_ENABLED=1",
@@ -31369,6 +31402,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -31398,6 +31432,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(inherited)",
 					"-DRCT_NEW_ARCH_ENABLED=1",
@@ -31422,6 +31457,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -31450,6 +31486,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -31469,6 +31506,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -31497,6 +31535,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -31516,6 +31555,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -31544,6 +31584,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -31563,6 +31604,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -31591,6 +31633,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -31610,6 +31653,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -31638,6 +31682,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -31657,6 +31702,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -31685,6 +31731,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -31704,6 +31751,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -31732,6 +31780,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -31751,6 +31800,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -31779,6 +31829,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -31798,6 +31849,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -31826,6 +31878,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -31845,6 +31898,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -31873,6 +31927,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -31892,6 +31947,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -31920,6 +31976,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -31939,6 +31996,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -31967,6 +32025,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -31986,6 +32045,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -32014,6 +32074,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -32033,6 +32094,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -32061,6 +32123,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -32080,6 +32143,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -32112,6 +32176,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -32131,6 +32196,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -32159,6 +32225,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -32178,6 +32245,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -32206,6 +32274,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -32225,6 +32294,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -32253,6 +32323,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -32272,6 +32343,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -32300,6 +32372,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -32319,6 +32392,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -32351,6 +32425,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -32370,6 +32445,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -32398,6 +32474,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -32417,6 +32494,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -32450,6 +32528,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -32469,6 +32548,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -32497,6 +32577,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -32516,6 +32597,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -32544,6 +32626,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -32558,6 +32641,7 @@
 				IBSC_MODULE = cxxreact;
 				INFOPLIST_FILE = "Target Support Files/React-cxxreact/ResourceBundle-React-cxxreact_privacy-React-cxxreact-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				PRODUCT_NAME = "React-cxxreact_privacy";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -32575,6 +32659,7 @@
 				IBSC_MODULE = cxxreact;
 				INFOPLIST_FILE = "Target Support Files/React-cxxreact/ResourceBundle-React-cxxreact_privacy-React-cxxreact-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				PRODUCT_NAME = "React-cxxreact_privacy";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -32597,6 +32682,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -32625,6 +32711,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -32644,6 +32731,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -32672,6 +32760,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -32691,6 +32780,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -32719,6 +32809,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -32738,6 +32829,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -32766,6 +32858,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -32785,6 +32878,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -32813,6 +32907,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -32832,6 +32927,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -32860,6 +32956,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -32879,6 +32976,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -32912,6 +33010,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -32931,6 +33030,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -32959,6 +33059,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -32978,6 +33079,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -33006,6 +33108,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -33025,6 +33128,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -33053,6 +33157,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -33072,6 +33177,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -33100,6 +33206,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -33119,6 +33226,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -33147,6 +33255,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -33166,6 +33275,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -33198,6 +33308,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -33217,6 +33328,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -33245,6 +33357,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -33264,6 +33377,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -33296,6 +33410,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -33315,6 +33430,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -33343,6 +33459,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -33362,6 +33479,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -33390,6 +33508,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -33409,6 +33528,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -33437,6 +33557,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -33456,6 +33577,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -33484,6 +33606,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -33503,6 +33626,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -33531,6 +33655,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -33550,6 +33675,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -33578,6 +33704,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -33597,6 +33724,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -33629,6 +33757,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -33648,6 +33777,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -33676,6 +33806,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -33695,6 +33826,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -33723,6 +33855,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -33742,6 +33875,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -33770,6 +33904,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -33789,6 +33924,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -33817,6 +33953,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -33836,6 +33973,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -33864,6 +34002,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -33883,6 +34022,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -33911,6 +34051,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -33930,6 +34071,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -33958,6 +34100,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -33977,6 +34120,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -34005,6 +34149,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -34024,6 +34169,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -34052,6 +34198,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -34071,6 +34218,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -34099,6 +34247,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -34113,6 +34262,7 @@
 				IBSC_MODULE = react_timing;
 				INFOPLIST_FILE = "Target Support Files/React-timing/ResourceBundle-React-timing_privacy-React-timing-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				PRODUCT_NAME = "React-timing_privacy";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -34130,6 +34280,7 @@
 				IBSC_MODULE = react_timing;
 				INFOPLIST_FILE = "Target Support Files/React-timing/ResourceBundle-React-timing_privacy-React-timing-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				PRODUCT_NAME = "React-timing_privacy";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -34152,6 +34303,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -34180,6 +34332,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -34199,6 +34352,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -34227,6 +34381,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -34246,6 +34401,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -34274,6 +34430,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -34293,6 +34450,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ReactAppDependencyProvider/ReactAppDependencyProvider-prefix.pch";
 				GENERATE_INFOPLIST_FILE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				MODULEMAP_FILE = Headers/Public/ReactAppDependencyProvider/ReactAppDependencyProvider.modulemap;
 				OTHER_CFLAGS = (
 					"$(inherited)",
@@ -34332,6 +34490,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ReactAppDependencyProvider/ReactAppDependencyProvider-prefix.pch";
 				GENERATE_INFOPLIST_FILE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				MODULEMAP_FILE = Headers/Public/ReactAppDependencyProvider/ReactAppDependencyProvider.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -34362,6 +34521,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ReactCodegen/ReactCodegen-prefix.pch";
 				GENERATE_INFOPLIST_FILE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				MODULEMAP_FILE = Headers/Public/ReactCodegen/ReactCodegen.modulemap;
 				OTHER_CFLAGS = (
 					"$(inherited)",
@@ -34401,6 +34561,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ReactCodegen/ReactCodegen-prefix.pch";
 				GENERATE_INFOPLIST_FILE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				MODULEMAP_FILE = Headers/Public/ReactCodegen/ReactCodegen.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -34431,6 +34592,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -34459,6 +34621,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -34478,6 +34641,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -34506,6 +34670,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -34525,6 +34690,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -34553,6 +34719,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -34572,6 +34739,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -34604,6 +34772,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -34623,6 +34792,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/react-native-safe-area-context/react-native-safe-area-context-prefix.pch";
 				GENERATE_INFOPLIST_FILE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -34661,6 +34831,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/react-native-safe-area-context/react-native-safe-area-context-prefix.pch";
 				GENERATE_INFOPLIST_FILE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -34690,6 +34861,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DNDEBUG",
@@ -34718,6 +34890,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -34735,6 +34908,7 @@
 				ENABLE_MODULE_VERIFIER = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ProductionApp/Pods-ProductionApp.modulemap";
 				OTHER_LDFLAGS = "";
@@ -34760,6 +34934,7 @@
 				ENABLE_MODULE_VERIFIER = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LIBTOOLFLAGS = "$(inherited) -no_warning_for_no_symbols";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ProductionApp/Pods-ProductionApp.modulemap";
 				OTHER_LDFLAGS = "";
